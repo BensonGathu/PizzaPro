@@ -30,11 +30,13 @@ $(document).ready(function(){
         // console.log(pizza)
         var choice = document.querySelector("input[name=delivery]:checked").value
         if(choice === "yes"){
+            confirm("You will be charged 200 for delivery services")
             var houseNumber = document.getElementById("houseNumber").value
             var street = document.getElementById("street").value
             var addr = new Address(houseNumber,street)
             var order = new Pizza(size,crust,toppings,num)
             order.addresses.push(addr)
+            alert("Your order will be delivered to your location")
     
         }else{
             var order = new Pizza(size,crust,toppings,num)
@@ -99,5 +101,6 @@ $(document).ready(function(){
     })
 
 })
+
 
 
