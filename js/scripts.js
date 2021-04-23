@@ -42,8 +42,9 @@ $(document).ready(function(){
         }
         console.log(order)
 
+        var total = 0
         var price = [] //variable to keep track of the prices
-
+        
         //functions do calculate our pricess
         function sizes(order){
             if(order.size === "Mega"){
@@ -81,9 +82,15 @@ $(document).ready(function(){
         //call our function
         toppingss(order)
 
-        alert(price)
+        //calculate the total of the elements in our price array. iterate through them
+        for(x=0;x<=price.length-1;x++){
+            var total = total += price[x]
+        }
+        alert(total*num)
 
     })
+     
+   
     $("input#yes").click(function(){
         $("#address").show()
     })
