@@ -32,7 +32,7 @@ $(document).ready(function(){
         $("#address").show()
     })
     $("input#no").click(function(){
-        $("#address").hide()
+        $("#address").hide() 
     })
 
 })
