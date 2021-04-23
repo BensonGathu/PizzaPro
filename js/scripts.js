@@ -5,8 +5,9 @@ function Pizza(size,crust,toppings,num){
     this.num = num;
     this.addresses = []
 }
-function Address(){
-
+function Address(house,street){
+    this.house = house;
+    this.street = street;
 }
 
 Pizza.prototype.fullDetails = function(){
@@ -26,7 +27,14 @@ $(document).ready(function(){
         var crust = crust.options[crust.selectedIndex].text
         var toppings = toppings.options[toppings.selectedIndex].text
         var pizza = new Pizza(size,crust,toppings,num)
-        console.log(pizza)
+        // console.log(pizza)
+        var choice = document.querySelector("input[name=delivery]:checked").value
+        if(choice === "yes"){
+            var houseNumber = document.getElementById("houseNumber").value
+            var street = document.getElementById("street").value
+            var add = new Address(houseNumber,street)
+            console.log(add)
+        }
     })
     $("input#yes").click(function(){
         $("#address").show()
@@ -36,3 +44,12 @@ $(document).ready(function(){
     })
 
 })
+
+
+// $(".new-address").each(function() {
+//     var inputtedStreet = $(this).find("input.new-street").val();
+//     var inputtedCity = $(this).find("input.new-city").val();
+//     var inputtedCounty = $(this).find("input.new-county").val();
+//     var newAddress = new Address(inputtedStreet, inputtedCity, inputtedCounty);
+//     newContact.addresses.push(newAddress);
+//   });
