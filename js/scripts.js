@@ -32,9 +32,57 @@ $(document).ready(function(){
         if(choice === "yes"){
             var houseNumber = document.getElementById("houseNumber").value
             var street = document.getElementById("street").value
-            var add = new Address(houseNumber,street)
-            console.log(add)
+            var addr = new Address(houseNumber,street)
+            var order = new Pizza(size,crust,toppings,num)
+            order.addresses.push(addr)
+    
+        }else{
+            var order = new Pizza(size,crust,toppings,num)
+        
         }
+        console.log(order)
+
+        var price = [] //variable to keep track of the prices
+
+        //functions do calculate our pricess
+        function sizes(order){
+            if(order.size === "Mega"){
+                price.push(1100)
+            }else if(order.size === "Large"){
+                price.push(850)
+            }else if(order.size === "Medium"){
+                price.push(550)
+            }else{
+                price.push(350)
+            }
+        }
+        //call our function
+        sizes(order)
+
+        function crusts(order){
+            if(order.crust === "Crispy" ){
+                price.push(100)
+            }else if(order.crust === "Stuffed"){
+                price.push(75)
+            }else{
+                price.push(50)
+            }
+        }
+        //call our function
+        crusts(order)
+
+        function toppingss(order){
+            if(order.toppings === "Pepperoni" || order.toppings === "Mushroom"){
+                price.push(100)
+            }else{
+                price.push(70)
+            }
+        }
+        //call our function
+        toppingss(order)
+
+        alert(price)
+
     })
     $("input#yes").click(function(){
         $("#address").show()
@@ -46,10 +94,3 @@ $(document).ready(function(){
 })
 
 
-// $(".new-address").each(function() {
-//     var inputtedStreet = $(this).find("input.new-street").val();
-//     var inputtedCity = $(this).find("input.new-city").val();
-//     var inputtedCounty = $(this).find("input.new-county").val();
-//     var newAddress = new Address(inputtedStreet, inputtedCity, inputtedCounty);
-//     newContact.addresses.push(newAddress);
-//   });
