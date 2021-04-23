@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProPizza</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="./js/scripts.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <p><h3>Welcome to ProPizza <img src="./img/slice.png" width="50" alt=""> </h3></p>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-md-7">
+                    <form>
+                        <label for="size">Choose Pizza Size:</label>
+                        <select id="size" name="size">
+                            <option value="mega">Mega</option>
+                            <option value="large">Large</option>
+                            <option value="medium">Medium</option>
+                            <option value="small">Small</option>
+                        </select> <br>
+                        <label for="crust">Whats your preffered crust:</label>
+                        <select id="crust" name="crust">
+                            <option value="crispy">Crispy</option>
+                            <option value="stuffed">Stuffed</option>
+                            <option value="gluten-free">Gluten-Free</option>
+                            <option value="brooklyn">Brooklyn</option>
+                        </select> <br>
+                        <label for="toppings">What topping would you like:</label>
+                        <select id="toppings" name="toppings">
+                            <option value="pepperoni">Pepperoni</option>
+                            <option value="mushroom">Mushroom</option>
+                            <option value="tomatoes">Tomatoes</option>
+                            <option value="sausage">Sausage</option>
+                        </select> <br>
+                        <label for="num">How many orders would you like </label>
+                        <input type="number" name="" id="num"  min="1" value="1"> <br>
+                        Would you like it delivered?  
+                        <label for="yes">Yes</label>
+                        <input type="radio" id="yes" name="delivery" value="yes">
+                        <label for="no">No</label>
+                        <input type="radio" id="no" name="delivery" value="no"><br>
+                        <div id="address">
+                            <div class="form-group">
+                                <label for="house">House Name/Number:</label>
+                                <input type="num" class=" form-control house">
+                            </div>
+                            <div class="form-group">
+                                <label for="street">Street:</label>
+                                <input type="text" class="form-control street">
+                            </div>
+
+                        </div>
+                        <input type="submit" value="Order">
+                    </form>
+                </div>
+                <div class="col-md-5">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, veritatis! Odio odit non eligendi, maxime cupiditate illum ea asperiores quam quis quo rerum natus veritatis ut quos, dolor fuga perferendis.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+
