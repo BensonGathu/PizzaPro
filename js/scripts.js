@@ -86,7 +86,7 @@ $(document).ready(function(){
         for(x=0;x<=price.length-1;x++){
             var total = total += price[x]
         }
-        alert(total*num)
+        alert(total *num)
 
     })
      
