@@ -11,7 +11,7 @@ function Address(house,street){
 }
 
 Pizza.prototype.fullDetails = function(){
-    return "Your Order details \n"+"Number of orders: "+this.num + "\n"+ "Pizza size: "+ this.size + "\n"+ "Preferred toppings: "+this.toppings + "\n"+ "Preferred crust: "+ this.crust;
+    return  "<b>Number of orders:</b> "+"<i>"+this.num + "</i>"+ "<br>"+ "<b>Pizza size: </b>"+ "<i>"+this.size+"</i>"+ "<br>"+ "<b>Preferred toppings: </b>"+ "<i>"+this.toppings+ "</i>"+ "<br>"+ "<b>Preferred crust: </b>"+ "<i>"+this.crust+ "</i>";
 
 }
 
@@ -95,10 +95,11 @@ $(document).ready(function(){
         for(x=0;x<=price.length-1;x++){
             var total = total += price[x]
         }
-        alert(total *num)
-        console.log(order.fullDetails())
+        total = total *num
 
+        $("ul#checkout").append( order.fullDetails()+ "<b> Total : </b>"+ total)
     })
+    
      
     
    
