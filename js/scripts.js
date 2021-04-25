@@ -97,7 +97,10 @@ $(document).ready(function(){
         }
         total = total *num
 
-        $("ul#checkout").append( order.fullDetails()+ "<b> Total : </b>"+ total)
+        $("ul#checkout").append( order.fullDetails()+ "<b> Total : </b> <i>ksh "+ total+"</i>")
+    })
+    $("input#check").click(function(){
+        $("ul#checkout").show()
     })
     
      
