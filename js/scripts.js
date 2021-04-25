@@ -11,8 +11,15 @@ function Address(house,street){
 }
 
 Pizza.prototype.fullDetails = function(){
-    
+    return "Your Order details \n"+"Number of orders: "+this.num + "\n"+ "Pizza size: "+ this.size + "\n"+ "Preferred toppings: "+this.toppings + "\n"+ "Preferred crust: "+ this.crust;
+
 }
+
+// $("ul#addresses").text("");
+// newContact.addresses.forEach(function(address) {
+//   $("ul#addresses").append("<li>" + address.street + ", " + address.city + " " + address.County + "</li>");
+// });
+
 
 $(document).ready(function(){
 
@@ -89,9 +96,11 @@ $(document).ready(function(){
             var total = total += price[x]
         }
         alert(total *num)
+        console.log(order.fullDetails())
 
     })
      
+    
    
     $("input#yes").click(function(){
         $("#address").show()
@@ -101,6 +110,4 @@ $(document).ready(function(){
     })
 
 })
-
-
 
