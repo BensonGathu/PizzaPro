@@ -4,6 +4,7 @@
 The user inputs his or her order details,depending on the type of pizza they want. Choose wheather they want the pizza delivered to them then place the order. The site will then show a total summary of the order
 ## Setup Instructions
 * The project uses one or more javascript functions.
+* The project uses jQuery to get information and work with it.
 * Appropriate control flows and logical operators are used in the project.
 * The project makes use of one or more arrays in javascript.
 * The project uses a  HTML input to collect user data.
@@ -11,11 +12,15 @@ The user inputs his or her order details,depending on the type of pizza they wan
 * The project works as expected, achieving the functionality required.
 ## Technical requirements
 * Project name.
+ProPizza
 * Project description.
+Projects recieves order details and calculates the total price and issues a summary.
 * Author(s) information.
 * Setup instructions - includes any scripts that need to be run if necessary.
+Fill in the required information
 * BDD.
 * Technologies used.
+HTML,javascript,css and jQuery
 * Contact information.
 * License and Copyright information.
 ## Link to live site
