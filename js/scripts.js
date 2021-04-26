@@ -15,12 +15,6 @@ Pizza.prototype.fullDetails = function(){
 
 }
 
-// $("ul#addresses").text("");
-// newContact.addresses.forEach(function(address) {
-//   $("ul#addresses").append("<li>" + address.street + ", " + address.city + " " + address.County + "</li>");
-// });
-
-
 $(document).ready(function(){
 
     $("form").submit(function(event){
@@ -97,7 +91,7 @@ $(document).ready(function(){
         }
         total = total *num
 
-        $("ul#checkout").append( order.fullDetails()+ "<b> Total : </b> <i>ksh "+ total+"</i>")
+        $("ul#checkout").append( order.fullDetails()+ "<b> <br>Total : <i>ksh "+ total+"</i> </b>")
     })
     $("input#check").click(function(){
         $("ul#checkout").show()

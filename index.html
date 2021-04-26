@@ -21,28 +21,28 @@
                 <div class="col-md-7">
                     <form>
                         <label for="size">Choose Pizza Size:</label>
-                        <select id="size" name="size">
+                        <select id="size" class="form-control" name="size">
                             <option value="mega">Mega</option>
                             <option value="large">Large</option>
                             <option value="medium">Medium</option>
                             <option value="small">Small</option>
                         </select> <br>
                         <label for="crust">Whats your preffered crust:</label>
-                        <select id="crust" name="crust">
+                        <select id="crust" class="form-control" name="crust">
                             <option value="crispy">Crispy</option>
                             <option value="stuffed">Stuffed</option>
                             <option value="gluten-free">Gluten-Free</option>
                             <option value="brooklyn">Brooklyn</option>
                         </select> <br>
                         <label for="toppings">What topping would you like:</label>
-                        <select id="toppings" name="toppings">
+                        <select id="toppings" class="form-control" name="toppings">
                             <option value="pepperoni">Pepperoni</option>
                             <option value="mushroom">Mushroom</option>
                             <option value="tomatoes">Tomatoes</option>
                             <option value="sausage">Sausage</option>
                         </select> <br>
                         <label for="num">How many orders would you like </label>
-                        <input type="number" name="" id="num"  min="1" value="1"> <br>
+                        <input type="number" class="form-control" name="" id="num"  min="1" value="1"> <br>
                         Would you like it delivered?  
                         <label for="yes">Yes</label>
                         <input type="radio" id="yes" name="delivery" value="yes">
@@ -59,13 +59,13 @@
                             </div>
 
                         </div>
-                        <input type="submit" value="Order"> 
-                        <input type="button" name="" id="check" value="Checkout">
+                        <input type="submit" class="btn btn-info" value="Order">
+                        <input type="button" name="" id="check" class="btn btn-success" value="Checkout">
                     </form>
                 </div>
                 <div class="col-md-5">
                     <ul id="checkout">
-                    <h2>Order Summary</h2>
+                    <h2> <b>Order Summary</b></h2>
                         
                        
                     </ul>
